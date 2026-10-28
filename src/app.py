@@ -3,12 +3,14 @@ from flask_mysqldb import MySQL
 from flask_cors import CORS
 from blueprints.alumnos.routes import alumnos_bp
 from blueprints.maestros.routes import maestros_bp
+from blueprints.administrativos.routes import administrativos_bp
 
 from config import config
 
 app=Flask(__name__)
 app.register_blueprint(alumnos_bp)
 app.register_blueprint(maestros_bp)
+app.register_blueprint(administrativos_bp)
 
 
 CORS(app)
